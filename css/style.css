@@ -23,6 +23,7 @@ body {
 }
 
 .header {
+    position: relative;
     /* 5vh always be empty 
     backgorund-size: cover = image adaptates to the size of browser*/
     height: 95vh;
@@ -37,5 +38,160 @@ body {
     background-position: top;
     /* create a corner from the bottom right side */
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%)
+}
 
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+/*.logo:hover {
+    animation: moveInRight 1s ease-in;
+}*/
+
+/* how put h1 in the center*/
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* in this way we use 50% of element not the parent */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    /* for avoiding shaking on the top in the end of animantion*/
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    /* we specify animation */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /*animation-delay: 3s;
+    how many times animation will work
+    animation-iteration-count: 3;*/
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.5px;
+    animation: moveInRight 1s ease-in;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    
+    /* 60% {
+        rotate thing!
+        transform: rotate(120deg);
+    } */
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* link is pseudo class*/
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s; 
+    position: relative;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn:active {
+    transform: translateY(-1px);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* type of animation */
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.btn-animated {
+    animation: moveInBottom 1s ease-in .75s;
+    /* it's trick because button is visible for the frst time*/
+    animation-fill-mode: backwards;
 }
