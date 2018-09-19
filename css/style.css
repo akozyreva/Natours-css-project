@@ -1,0 +1,41 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px;
+}
+
+.header {
+    /* 5vh always be empty 
+    backgorund-size: cover = image adaptates to the size of browser*/
+    height: 95vh;
+    /* add a gradient */
+    background-image: linear-gradient(
+        to right bottom,
+        #a7e09dc9,
+        #28b485) ,
+         url(../img/hero.jpg);
+    background-size: cover;
+    /* allow you to always fix position of img in the top*/
+    background-position: top;
+    /* create a corner from the bottom right side */
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%)
+
+}
