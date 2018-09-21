@@ -10,3 +10,7 @@ In order to run it, type the following:
 ```
 npm run compile:sass
 ```
+In order to run it on the server, type the following in other tab of terminal:
+```
+npm run dev
+```
