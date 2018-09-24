@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+    /* 5vh always be empty 
+    backgorund-size: cover = image adaptates to the size of browser*/
+    height: 95vh;
+    /* add a gradient */
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark) ,
+         url(../img/hero.jpg);
+    background-size: cover;
+    /* allow you to always fix position of img in the top*/
+    background-position: top;
+    /* create a corner from the bottom right side */
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%)
+
+    &___logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 3.5rem;
+    }
+    
+    /*.logo:hover {
+        animation: moveInRight 1s ease-in;
+    }*/
+    
+    /* how put h1 in the center*/
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* in this way we use 50% of element not the parent */
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+}
+

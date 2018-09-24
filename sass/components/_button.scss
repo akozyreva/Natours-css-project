@@ -1,0 +1,52 @@
+/* link is pseudo class*/
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s; 
+    position: relative;
+}
+.btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+    &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+}
+.btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+        background-color: $color-white;
+    }
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* type of animation */
+    transition: all .4s;
+}
+
+.btn--animated {
+    animation: moveInBottom 1s ease-in .75s;
+    /* it's trick because button is visible for the frst time*/
+    animation-fill-mode: backwards;
+}
