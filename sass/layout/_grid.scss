@@ -1,7 +1,6 @@
 .row {
     // wisth = 1140px, it's standard. 1140/10=114rem, because 1rem = 10px 
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto;
 
 
@@ -14,7 +13,6 @@
 
     // select all attributes, which start from col and apply styles on it
     [class^="col-"] {
-        background-color: orangered;
         float: left;
 
         &:not(:last-child) {

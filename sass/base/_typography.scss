@@ -29,3 +29,24 @@
     }
     
 }
+
+// heading in section about
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    // we made background
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    // clip this to the text level and add color
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    // in order to do it more beautifully
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(2deg) skewX(5deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba(black, 0.2)
+    }
+}
