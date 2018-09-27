@@ -18,7 +18,7 @@ npm install
 ```
 For correct work of pug locally, you need to install pug-cli globally
 ```
-npm install pug-cli
+npm install pug-cli -g
 ```
 In order to run it, type the following:
 ```
