@@ -5,12 +5,19 @@ https://www.udemy.com/advanced-css-and-sass/
 
 https://github.com/jonasschmedtmann/advanced-css-course
 
+# Instruments
+This is light project. For CSS I use SASS, for HTML I use PUG, for rendering locally I use lite-server.
+
 # How to run
+In order to install packeages, type the following:
+```
+npm install
+```
+For correct work of pug locally, you need to install pug-cli globally
+```
+npm install pug-cli
+```
 In order to run it, type the following:
 ```
-npm run compile:sass
-```
-In order to run it on the server, type the following in other tab of terminal:
-```
-npm run dev
+npm run build
 ```
