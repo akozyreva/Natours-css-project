@@ -29,6 +29,7 @@
 }
 
 .section-stories {
-    background-color: $color-grey-light-1;
-    padding: 15rem 0;
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0;
 }
