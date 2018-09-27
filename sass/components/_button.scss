@@ -31,6 +31,15 @@
     }
 }
 
+.btn--green {
+    background-color: $color-primary;
+    color: white;
+
+    &::after {
+        background-color: $color-primary;
+    }
+}
+
 .btn::after {
     content: "";
     display: inline-block;

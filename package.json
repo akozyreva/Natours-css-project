@@ -4,8 +4,10 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
+    "compile:pug": "pug templates/index.pug --out . --watch",
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "build": "npm run compile:sass & npm run dev & npm run compile:pug"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,8 @@
   "homepage": "https://github.com/akozyreva/Natours-css-project#readme",
   "devDependencies": {
     "lite-server": "^2.4.0",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "pug": "^2.0.3"
   },
   "dependencies": {
     "live-server": "^1.2.0"
