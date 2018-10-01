@@ -1,3 +1,6 @@
+# Demo
+https://akozyreva.github.io/natours-css-project/
+
 # Natours-css-project
 This is css-project, which I made on this course:
 
@@ -15,7 +18,7 @@ npm install
 ```
 For correct work of pug locally, you need to install pug-cli globally
 ```
-npm install pug-cli
+npm install pug-cli -g
 ```
 In order to run it, type the following:
 ```
